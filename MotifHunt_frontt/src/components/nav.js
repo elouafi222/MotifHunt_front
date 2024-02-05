@@ -1,7 +1,7 @@
 import image from "../img/motifHunts-removebg-preview.png";
 const Nav = () => {
   return (
-    <nav className="navbar px-5 fixed-top">
+    <nav className="navbar px-lg-5 fixed-top">
       <div className="container-fluid">
         <a className="navbar-logo" href="/">
           Motif Hunts
