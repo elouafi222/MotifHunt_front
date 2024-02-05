@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+:root {
+  --bgprimary-color: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+  --hover-color: rgb(16, 37, 60);
+  --pfont-color: #908d96;
+  --titlefont-color: #fff;
+  --border-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: var(--bgprimary-color)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.no-outiline {
+  outline: 0px !important;
+  box-shadow: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar {
+  height: 10vh;
+  background-color: transparent
+}
+
+.navbar-logo {
+  color: var(--titlefont-color);
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: var(--titlefont-color);
+  transition: .2s ease;
+  border: 2px solid var(--border-color);
+  max-width: 50vh;
+  width: 50vh;
+
+}
+
+.nav-link i {
+  font-size: 1rem;
+
+}
+
+.nav-link:hover {
+  color: var(--titlefont-color);
+  background-color: transparent;
+  border-color: var(--border-color);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.203);
+}
+
+.offcanvas {
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 5px 15px rgba(255, 255, 255, 0.203);
+}
+
+.offcanvas,
+.offcanvas-lg,
+.offcanvas-md,
+.offcanvas-sm,
+.offcanvas-xl,
+.offcanvas-xxl {
+
+  --bs-offcanvas-height: 100vh;
+}
+
+i {
+  color: var(--titlefont-color);
+  font-size: 1.5rem;
+  transition: .2s ease;
+}
+
+.togelle:hover {
+  color: var(--hover-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--titlefont-color);
+}
+
+button:focus {
+  background-color: none;
+
+}
+
+.btn-custom {
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+  transition: .2s ease;
+  color: var(--titlefont-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+
+}
+
+.btn-custom:hover {
+  color: var(--titlefont-color);
+  border-color: var(--border-color);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.203);
+}
+
+.custom-input {
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+  transition: .2s ease;
+  font-size: 1.2rem;
+  border-right: none;
+  width: 100%;
+  outline: none;
+  color: var(--titlefont-color);
+  caret-color: var(--border-color);
+}
+
+.form {
+  border-right: 2px solid var(--border-color);
+}
+
+label {
+  color: var(--titlefont-color);
+  font-size: 1.2rem;
+}
+
+.animation {
+  font-size: 5rem;
+}
+
+.resume-text-box {
+  overflow-y: scroll;
+  height: 65vh;
+  /* box-shadow: inset 0 5px 15px rgba(255, 255, 255, 0.203); */
+  border: 2px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+.resume-text {
+
+  color: var(--pfont-color);
+}
+
+iframe {
+  height: 400px;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 5px 15px rgba(255, 255, 255, 0.203);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.203);
+}
+
+::placeholder {
+  color: var(--pfont-color);
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile+label {
+  font-size: 1.25em;
+  font-weight: 700;
   color: white;
+  background-color: black;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+.inputfile:focus+label,
+.inputfile+label:hover {
+  background-color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputfile+label {
+  cursor: pointer;
+  /* "hand" cursor */
 }

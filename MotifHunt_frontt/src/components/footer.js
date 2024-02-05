@@ -1,4 +1,4 @@
-import image from './motifHunts-removebg-preview.png';
+import image from '../img/motifHunts-removebg-preview.png';
 
 const Footer = () => {
     return (
