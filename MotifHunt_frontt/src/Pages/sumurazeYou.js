@@ -1,6 +1,7 @@
 import { motion as m } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import DataFetchingComponent from "./DataFetchingComponent";
 
 const AfficheVideo = ({ onSendValue }) => {
   const [Url, setURL] = useState("https://www.youtube.com/watch?v=9QBy2n2ojIg");
@@ -50,6 +51,8 @@ const AfficheVideo = ({ onSendValue }) => {
     </m.div>
   );
 };
+
+
 
 export default class SumarazeYou extends React.Component {
   state = {
@@ -106,6 +109,10 @@ export default class SumarazeYou extends React.Component {
                 {this.state.chatText.textSummarize}
               </p>
             </div>
+          </div>
+
+          <div className="col-md-7">
+            <DataFetchingComponent />
           </div>
         </div>
       </div>
