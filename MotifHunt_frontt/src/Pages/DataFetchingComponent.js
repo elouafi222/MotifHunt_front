@@ -1,4 +1,3 @@
-import { motion as m } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -12,12 +11,8 @@ export default function DataFetchingComponent() {
         setError(null);
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/text2');
-            if (!response.ok) {
-                throw new Error('Failed to fetch data');
-            }
-            const responseData = await response.json();
-            setData(responseData);
+            const response = await axios.post('http://127.0.0.1:5000/text2');
+            setData(response.data);
         } catch (error) {
             setError(error.message);
         }
@@ -33,7 +28,6 @@ export default function DataFetchingComponent() {
             <p className="resume-text  ">
                 {data.history}
             </p>
-
         </div>
     );
 }
