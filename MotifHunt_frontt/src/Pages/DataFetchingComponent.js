@@ -30,8 +30,10 @@ export default function DataFetchingComponent() {
             <button onClick={fetchData} disabled={isLoading}>
                 {isLoading ? 'Loading...' : 'Fetch Data'}
             </button>
-            {error && <div>Error: {error}</div>}
-            {data && <div>Data: {data}</div>}
+            <p className="resume-text  ">
+                {data.history}
+            </p>
+
         </div>
     );
 }
