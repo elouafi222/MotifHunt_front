@@ -1,7 +1,7 @@
 import "./App.css";
-import Nav from "./components/nav";
+import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import Sumaraze from "./Pages/sumurazePage";
 import SumarazeYou from "./Pages/sumurazeYou";
 import { Routes, Route } from "react-router-dom";
@@ -22,7 +22,7 @@ function Bug(props) {
 function App() {
   return (
     <AnimatePresence>
-      <Nav />
+      <Navbar />
       <m.div
         initial={{ y: "100%" }}
         animate={{ y: "0%" }}
@@ -34,7 +34,7 @@ function App() {
           <Route path="/sumaraze/custom" element={<Sumaraze />} />
           <Route path="/sumaraze/youtube" element={<SumarazeYou />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </m.div>
     </AnimatePresence>
   );

@@ -1,5 +1,5 @@
 import image from "../img/motifHunts-removebg-preview.png";
-const Nav = () => {
+const Navbar = () => {
   return (
     <nav className="navbar px-lg-5 fixed-top">
       <div className="container-fluid">
@@ -68,4 +68,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navbar;

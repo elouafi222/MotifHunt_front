@@ -1,9 +1,18 @@
 :root {
   --bgprimary-color: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
   --hover-color: rgb(16, 37, 60);
-  --pfont-color: #908d96;
-  --titlefont-color: #fff;
-  --border-color: #fff;
+  --pfont-color: #8892b0;
+  --dark-grey: #495670;
+  --white: #fff;
+  --fz-sm: 13px;
+  --fz-xs: 9px;
+  --fz-md: 20px;
+  --fz-md-res: 18px;
+  --fz-lg: 40px;
+  --fz-xl: 60px;
+  --fz-xxl: 80px;
+  --nav-scroll-height: 70px;
+
 }
 
 body {
@@ -22,20 +31,21 @@ body {
 
 }
 .navbar.scrolled{
+  height: var(--nav-scroll-height);
   backdrop-filter: blur(8px);
   box-shadow: inset 0 5px 15px rgba(255, 255, 255, 0.203);
 }
 .navbar-logo {
-  color: var(--titlefont-color);
+  color: var(--white);
   font-weight: bolder;
   text-decoration: none;
   font-size: 1.5rem;
 }
 
 .nav-link {
-  color: var(--titlefont-color);
+  color: var(--white);
   transition: .2s ease;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--white);
   max-width: 50vh;
   width: 50vh;
 
@@ -47,9 +57,9 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--titlefont-color);
+  color: var(--white);
   background-color: transparent;
-  border-color: var(--border-color);
+  white: var(--white);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.203);
 }
 
@@ -70,7 +80,7 @@ body {
 }
 
 i {
-  color: var(--titlefont-color);
+  color: var(--white);
   font-size: 1.5rem;
   transition: .2s ease;
 }
@@ -85,60 +95,66 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--titlefont-color);
+  color: var(--white);
 }
-
+.animation{
+  font-size: var(--fz-xxl);
+  
+}
 button:focus {
   background-color: none;
 
 }
-
+.resume-text {
+  text-align: justify;
+  font-size: var(--fz-md);
+}
 .btn-custom {
   background-color: transparent;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--white);
   transition: .2s ease;
-  color: var(--titlefont-color);
+  color: var(--white);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: var(--fz-md);
 
 }
 
 .btn-custom:hover {
-  color: var(--titlefont-color);
-  border-color: var(--border-color);
+  color: var(--white);
+  white: var(--white);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.203);
 }
 
 .custom-input {
   background-color: transparent;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--white);
   transition: .2s ease;
   font-size: 1.2rem;
   border-right: none;
   width: 100%;
   outline: none;
-  color: var(--titlefont-color);
-  caret-color: var(--border-color);
+  color: var(--white);
+  caret-color: var(--white);
 }
 
 .form {
-  border-right: 2px solid var(--border-color);
+  border-right: 2px solid var(--white);
 }
 
 label {
-  color: var(--titlefont-color);
-  font-size: 1.2rem;
+  color: var(--white);
+  font-size: var(--fz-md);
 }
 
 .animation {
-  font-size: 5rem;
+  font-size: var(--fz-lg);
 }
 
 .resume-text-box {
   overflow-y: scroll;
   height: 65vh;
   /* box-shadow: inset 0 5px 15px rgba(255, 255, 255, 0.203); */
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--white);
   backdrop-filter: blur(10px);
 }
 
@@ -151,25 +167,39 @@ iframe {
   height: 400px;
   width: 100%;
 }
-
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 5px 15px rgba(255, 255, 255, 0.203);
-  border-radius: 10px;
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-grey) transparent;
+  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
 }
 
 ::-webkit-scrollbar-thumb {
+  background-color: var(--dark-grey);
+  border: 3px solid var(--hover-color);
   border-radius: 10px;
-  background-color: white;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.203);
+::-webkit-scrollbar-track {
+  background: var(--hover-color);
 }
+
 
 ::placeholder {
   color: var(--pfont-color);
+}
+.footer {
+  height: 9vh;
+  color: var(--white);
+  font-size:var(--fz-sm);
+}
+.footer .links{
+  color: var(--white);
+}
+@media (max-width: 992px) {
+
+  .animation  {
+      font-size: var(--fz-xl);
+  }
+
+
 }

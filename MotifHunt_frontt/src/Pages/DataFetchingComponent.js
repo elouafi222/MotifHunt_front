@@ -22,7 +22,7 @@ export default function DataFetchingComponent() {
 
     return (
         <div>
-            <button onClick={fetchData} disabled={isLoading}>
+            <button className="btn-custom rounded-5 mt-3 mx-1 px-4" onClick={fetchData} disabled={isLoading}>
                 {isLoading ? 'Loading...' : 'Fetch Data'}
             </button>
             <p className="resume-text  ">

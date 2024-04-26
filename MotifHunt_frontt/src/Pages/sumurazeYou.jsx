@@ -52,8 +52,6 @@ const AfficheVideo = ({ onSendValue }) => {
   );
 };
 
-
-
 export default class SumarazeYou extends React.Component {
   state = {
     chatText: { textSummarize: "" },
@@ -96,10 +94,11 @@ export default class SumarazeYou extends React.Component {
       >
         <div className="row">
           <h1 className="text-center mb-5">Youtube Video Uploader</h1>
-          <div className="col-md-6  ">
+          <div className="col-md-6 text-center text-lg-start">
             <AfficheVideo onSendValue={this.handleValueFromChild} />
+            <DataFetchingComponent />
           </div>
-          <div className="col-md-6 ">
+          <div className="col-md-6">
             <div className="d-flex justify-content-between ">
               <h5>Summary of text :</h5>
               <i class="fa-regular fa-copy me-1"></i>
@@ -109,10 +108,6 @@ export default class SumarazeYou extends React.Component {
                 {this.state.chatText.textSummarize}
               </p>
             </div>
-          </div>
-
-          <div className="col-md-7">
-            <DataFetchingComponent />
           </div>
         </div>
       </div>
